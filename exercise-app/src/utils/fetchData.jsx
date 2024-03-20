@@ -1,16 +1,13 @@
-require("dotenv").config();
-
 export const exerciseOptions = {
   method: "GET",
-  url: "https://exercisedb.p.rapidapi.com/exercises/bodyPart/back",
-  params: { limit: "10" },
+  url: "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
   headers: {
-    "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
+    "X-RapidAPI-Key": "2313977fc1msha753b05f963ce76p1ca65ajsn39b95f242141",
   },
 };
 
-export const fetchData = async function (url, options) {
+export const fetchData = async (url, options) => {
   const response = await fetch(url, options);
   const data = await response.json;
 
