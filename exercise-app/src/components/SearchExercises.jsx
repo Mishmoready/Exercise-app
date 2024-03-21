@@ -5,8 +5,6 @@ import HorizontalScrollbar from "./HorizontalScrollbar";
 
 const SearchExercises = () => {
   const [search, setSearch] = useState("");
-  const [exercises, setExercises] = useState([]);
-  const [bodyParts, setBodyParts] = useState([]);
 
   useEffect(() => {
     const fetchExercisesData = async () => {
@@ -27,11 +25,11 @@ const SearchExercises = () => {
         exerciseOptions
       );
       const searchedExercises = exercisesData.filter(
-        (exercise) =>
-          exercise.name.toLowerCase().includes(search) ||
-          exercise.target.toLowerCase().includes(search) ||
-          exercise.equipment.toLowerCase().includes(search) ||
-          exercise.bodyPart.toLowerCase().includes(search)
+        (exercises) =>
+          exercises.name.toLowerCase().includes(search) ||
+          exercises.target.toLowerCase().includes(search) ||
+          exercises.equipment.toLowerCase().includes(search) ||
+          exercises.bodyPart.toLowerCase().includes(search)
       );
       setSearch("");
       setExercises(searchedExercises);
