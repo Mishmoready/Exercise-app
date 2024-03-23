@@ -1,4 +1,4 @@
-import { Box, Typography, Stack, Button } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import HeroBannerImage from "../assets/images/banner.png";
 
 const HeroBanner = () => {
@@ -25,13 +25,24 @@ const HeroBanner = () => {
       <Typography fontSize={"22px"} lineHeight={"25px"} mb={3}>
         Get Ready
       </Typography>
-      <Button
-        variant="contained"
-        color="error"
-        href="#exercises"
-        sx={{ backgroundColor: "#ff2625", padding: "10px" }}
-      >
-        Search Exercise
+      <Button>
+        <a
+          href="#exercises"
+          style={{
+            marginTop: "45px",
+            textDecoration: "none",
+            width: "200px",
+            textAlign: "center",
+            background: "#FF2625",
+            padding: "10px",
+            fontSize: "22px",
+            textTransform: "none",
+            color: "white",
+            borderRadius: "4px",
+          }}
+        >
+          Explore Exercises
+        </a>
       </Button>
       <Typography
         fontWeight={600}
